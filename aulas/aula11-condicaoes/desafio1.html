@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESAFIO</title>
+</head>
+<body>
+    <h1>De que país você é?</h1>
+    País: <input type="text" name="txt" id="itxt">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        function calcular(){
+            var pais = document.querySelector('input#itxt')
+            var res = document.querySelector('div#res')
+            res.innerHTML = '<p>Resultado: </p>'
+            if (pais.value != 'Brasil'){
+                res.innerHTML += '<p>Você é <strong>estrangeiro!</strong></p>'
+            } else {
+                res.innerHTML += '<p>Você é <strong>Brasileiro(a)</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
